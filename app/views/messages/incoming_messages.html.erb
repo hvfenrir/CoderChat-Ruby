@@ -1,0 +1,8 @@
+<h1>List Incoming Messages</h1>
+<% @messages.each do |message| %>
+	<%= message.sender_id %>
+	<%= message.recipient_id %>
+	<%= message.title %>
+	<%= message.body %>
+	<%= message.created_at %>
+<% end %>

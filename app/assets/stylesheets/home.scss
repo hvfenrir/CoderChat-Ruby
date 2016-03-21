@@ -1,0 +1,66 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+	position: relative;
+	height: 100%;
+}
+body{
+	height:100%;
+	color: brown;
+	background: url(http://www.pptgrounds.com/wp-content/uploads/2013/05/Email-and-Letter-Post-Powerpoint-Backgrounds.jpg);
+	font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.navbar-brand {
+  float: none;
+}
+.navbar-nav .nav-item {
+  float: none;
+
+}
+.navbar-divider,
+.navbar-nav .nav-item+.nav-item,
+.navbar-nav .nav-link + .nav-link {
+  margin-left: 0;
+}
+@media (min-width: 34em) {
+  .navbar-brand {
+    float: left;
+  }
+  .navbar-nav .nav-item {
+    float: left;
+  }
+  .navbar-divider,
+  .navbar-nav .nav-item+.nav-item,
+  .navbar-nav .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+}
+.navbar{
+	border-radius: 0px;
+}
+
+.section-address{
+	width: 100%;
+	background: darken(red,20%);
+	color: white;
+	padding: 40px 0px;
+	text-align: center;
+}
+.section-location{
+	width: 100%;
+	background: darken(gray,20%);
+	color: white;
+	padding: 40px 0px;
+	position: relative;
+	.info{
+		iframe{
+			width: 100%;
+		}
+	}
+	text-align: center;
+
+}

@@ -1,0 +1,15 @@
+
+	<div class="card card-show " >
+	  <!-- <img class="card-img-top" data-src="..." alt="Card image cap"> -->
+	  <div class="card-block">
+	  	<h4 class="card-title">Sender: <%= User.find_by_id(@message.sender_id).name %></h4>
+	    <h4 class="card-title">Title: <%= @message.title %></h4>
+	     <p class="card-text">Time: <%= @message.created_at %></p>
+	    <p class="card-text">Content: <%= @message.body %></p>
+	   
+	    <%= link_to "Reply" ,class: 'btn btn-primary'%>
+	    <!-- <a href="#" class="btn btn-primary">Button</a> -->
+	    
+	  </div>
+	</div>
+	

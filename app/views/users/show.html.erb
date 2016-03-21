@@ -1,0 +1,18 @@
+<h1>List Friends</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% for user in @user.friends %>
+    <tr>
+      <td><%= user.name %>	</td>
+      <td><%= user.email %>	</td>
+    </tr>
+    <% end %>
+    
+  </tbody>
+</table>

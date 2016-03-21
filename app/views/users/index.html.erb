@@ -1,0 +1,26 @@
+<% @users.each do |user| %>
+
+	<% if current_user.friends.include?(user) %>
+	<div class="card" style="text-align: center">
+		<!-- <img class="card-img-top" data-src="..." alt="Card image cap"> -->
+		<div class="card-block">
+			<h4 class="card-title"><%= user.name %></h4>
+			<p class="card-text"><%= user.email %></p>
+			<!-- <a href="#" class="btn btn-primary">Button</a> -->
+			<%= link_to "Remove Friend", friendship_path(user.id),method: "delete" ,data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+		</div>
+	</div>
+	<% else %>
+	<div class="card" style="text-align: center">
+		<!-- <img class="card-img-top" data-src="..." alt="Card image cap"> -->
+		<div class="card-block">
+			<h4 class="card-title"><%= user.name %></h4>
+			<p class=
+			"card-text"><%= user.email %></p>
+			<!-- <a href="#" class="btn btn-primary">Button</a> -->
+			<%= link_to "Add Friend", user_friendships_path(current_user,friend_id: user.id) ,method: 'post' , class: "btn btn-primary"%>
+		</div>
+	</div>
+	<% end %>
+	
+<% end %>

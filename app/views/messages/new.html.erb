@@ -1,0 +1,9 @@
+<h1>New Message</h1>
+<%= simple_form_for @message do |f| %>
+	<%= f.input :title %>
+	<%= f.input :body %>
+	<%= f.input :recipient_id do %>			
+	<%= f.select :recipient_id, current_user.friends.collect {|f| [f.name, f.id] }, label: "recipient", include_blank: true %>
+<% end %>	
+	<%= f.submit "Send Mail" %>
+<% end %>

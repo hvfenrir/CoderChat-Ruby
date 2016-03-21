@@ -1,0 +1,41 @@
+<div class="form-login">
+  <!-- <div class="pen-title">
+    <h1>Register Form</h1>
+  </div> -->
+  <div class="container-login-form active">
+    <div class="card"></div>
+    <div class="card alt">
+      <div class="toggle"></div>
+      <h1 class="title">Register
+      </h1>
+      <%= simple_form_for @user do |f| %>
+      <div class="input-container-login-form register">
+        <!-- <input type="text" id="Username" required="required"/> -->
+        <%= f.input :name ,type: "text", id: "Username" ,required: "required"%>
+        <!-- <label for="Username">Username</label> -->
+        <div class="bar"></div>
+      </div>
+      <div class="input-container-login-form register">
+        <!-- <input type="password" id="Repeat Password" required="required"/> -->
+        <%= f.input :email ,type: "text", id: "Email" ,required: "required"%>
+        <!-- <label for="Email">Email</label> -->
+        <div class="bar"></div>
+      </div>
+      <div class="input-container-login-form register">
+        <!-- <input type="password" id="Password" required="required"/> -->
+        <%= f.input :password, type: "password" ,id: "Password" ,required: "required" %>
+        <!-- <label for="Password">Password</label> -->
+        <div class="bar"></div>
+      </div>
+      <div class="input-container-login-form register">
+        <input type="password" id="Repeat Password" required="required"/>
+        <label for="Repeat Password">Repeat Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container-login-form">
+        <button type="submit"><span>Register</span></button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

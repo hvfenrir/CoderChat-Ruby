@@ -1,0 +1,19 @@
+<h1>List Messages</h1>
+<% @messages.each do |message| %>
+	<div class="card <%= (params[:action_mess] == 'incoming' && message.read_at == nil) && 'unread' %>" style="text-align: center" >
+	  <!-- <img class="card-img-top" data-src="..." alt="Card image cap"> -->
+	  <div class="card-block">
+	  	<h4 class="card-title">Sender: <%= User.find_by_id(message.sender_id).name %></h4>
+	    <h4 class="card-title">Title: <%= message.title %></h4>
+	   	
+	   <% if message.read_at != nil %>
+	   		<p class="card-text">Read at: <%= message.read_at %></p>
+	   <% end %>
+	   
+	    <%= link_to "Show", user_message_path(current_user,message.id) ,class: 'btn btn-primary'%>
+	    <!-- <a href="#" class="btn btn-primary">Button</a> -->
+	    
+	  </div>
+	</div>
+	
+<% end %>

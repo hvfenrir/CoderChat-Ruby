@@ -1,0 +1,33 @@
+<div class="form-login">
+  <!-- <div class="pen-title">
+    <h1>Login Form</h1>
+  </div> -->
+  <div class="container-login-form">
+    <div class="card"></div>
+    <div class="card">
+      <h1 class="title">Login</h1>
+      <%= form_tag sessions_path , method: 'post' do %>
+        <div class="input-container-login-form">
+          <!-- <input type="text" id="Username" required="required"/> -->
+           <%= text_field_tag :email,"",id: "Username",type: "text",required: "required"%>
+          <label for="Username">Email</label>
+          <div class="bar"></div>
+        </div>
+        <div class="input-container-login-form">
+          <!-- <input type="password" id="Password" required="required"/> -->
+          <%= password_field_tag :password,"",id: "Password",type: "password",required: "required" %>
+          <label for="Password">Password</label>
+          <div class="bar"></div>
+        </div>
+        <div class="button-container-login-form">
+          <button type="submit"><span>Login</span></button>
+
+        </div>
+        <div class="footer"><%= link_to "Sign Up", new_user_path %></div>
+      </form>
+    </div>
+    
+      <% end %>
+    </div>
+  </div>
+</div>
